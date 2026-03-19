@@ -1,53 +1,49 @@
-<<<<<<< HEAD
-# Suivi des Postulations
+# PostulAPP 📋
 
-Application web de suivi des candidatures, construite avec React + Supabase.
+Application web de suivi des candidatures d'emploi, construite avec React et Supabase.
 
-## Stack technique
-
-- **Frontend** : React 18 + Vite
-- **UI** : Tailwind CSS
-- **Base de données** : Supabase (PostgreSQL)
-- **Authentification** : Supabase Auth
-- **Hébergement** : Vercel
+🔗 **[Accéder à l'application](https://postulapplication.vercel.app)**
 
 ---
 
-## Installation
+## Fonctionnalités
 
-### 1. Cloner le projet
+### 📊 Dashboard
+- Statistiques en temps réel : postulations du mois, en cours, chômage non déclaré, total, refus
+- Entretiens à venir
+- Relances J+15
+- Répartition par institution et par poste
 
-```bash
-git clone <votre-repo>
-cd suivi-postulations
-npm install
-```
+### 📝 Suivi des postulations
+- Ajout, modification et suppression de candidatures
+- Suivi des dates : postulation, entrée en fonction, relance, entretiens
+- Validation : la date d'entrée ne peut pas être antérieure à la date de postulation
+- Filtres : toutes / en cours / refus
+- Journal de notes par postulation avec support Markdown
+- Catégories de notes : entretien, relance, contact, document, autre
 
-### 2. Configurer Supabase
+### 🏢 Catalogue d'entreprises
+- Fiche par entreprise : site web, adresse, contact RH, notes
+- Système de favoris ⭐
+- Recherche et filtre par favoris
+- Compteur de postulations par entreprise
 
-1. Créez un compte sur [supabase.com](https://supabase.com)
-2. Créez un nouveau projet
-3. Dans **SQL Editor**, exécutez le contenu du fichier `supabase/schema.sql`
-4. Récupérez vos clés dans **Settings → API**
+### 🔐 Authentification
+- Inscription et connexion par email
+- Chaque utilisateur ne voit que ses propres données (Row Level Security)
 
-### 3. Variables d'environnement
+---
 
-Copiez `.env.example` en `.env.local` et remplissez vos clés :
+## Stack technique
 
-```bash
-cp .env.example .env.local
-```
-
-```env
-VITE_SUPABASE_URL=https://xxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=votre_clé_anon
-```
-
-### 4. Lancer en développement
-
-```bash
-npm run dev
-```
+| Outil | Rôle |
+|---|---|
+| React 18 + Vite | Frontend |
+| Tailwind CSS | Styles |
+| Supabase | Base de données PostgreSQL + Auth |
+| Vercel | Hébergement et déploiement |
+| react-markdown | Rendu Markdown dans les notes |
+| date-fns | Manipulation des dates |
 
 ---
 
@@ -59,39 +55,22 @@ src/
 │   ├── layout/
 │   │   ├── Navbar.jsx
 │   │   └── Layout.jsx
-│   ├── postulations/
-│   │   ├── PostulationTable.jsx
-│   │   ├── PostulationForm.jsx
-│   │   └── PostulationRow.jsx
-│   └── dashboard/
-│       ├── Dashboard.jsx
-│       ├── StatCard.jsx
-│       ├── EntretiensAVenir.jsx
-│       └── RelancesTable.jsx
+│   └── postulations/
+│       ├── PostulationTable.jsx
+│       ├── PostulationForm.jsx
+│       └── NotesJournal.jsx
 ├── pages/
 │   ├── LoginPage.jsx
 │   ├── SuiviPage.jsx
-│   └── DashboardPage.jsx
+│   ├── DashboardPage.jsx
+│   └── EntreprisesPage.jsx
 ├── hooks/
 │   ├── usePostulations.js
+│   ├── useNotes.js
+│   ├── useEntreprises.js
 │   └── useAuth.js
 ├── lib/
 │   └── supabase.js
 ├── App.jsx
 └── main.jsx
 ```
-
----
-
-## Déploiement sur Vercel
-
-```bash
-npm install -g vercel
-vercel
-```
-
-Ajoutez vos variables d'environnement dans le dashboard Vercel.
-=======
-# PostulAPP
-Suivi des postulations
->>>>>>> 91216481efe019481b279ac7858517c2078b695a
