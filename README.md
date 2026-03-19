@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Suivi des Postulations
 
 Application web de suivi des candidatures, construite avec React + Supabase.
@@ -90,3 +91,7 @@ vercel
 ```
 
 Ajoutez vos variables d'environnement dans le dashboard Vercel.
+=======
+# PostulAPP
+Suivi des postulations
+>>>>>>> 91216481efe019481b279ac7858517c2078b695a
