@@ -2,7 +2,7 @@
 
 Application web de suivi des candidatures d'emploi, construite avec React et Supabase.
 
-🔗 **[Accéder à l'application](https://postulapplication.vercel.app)**
+🔗 **[Accéder à l'application](https://postulapp.vercel.app/)**
 
 ---
 
